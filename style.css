@@ -1,0 +1,184 @@
+{
+	box-sizing: border-box;
+}
+h1 {
+	margin: 20px;
+	color: whitesmoke;
+}
+body {
+	margin: 0px;
+	background-color: black;
+	background-image: url("images/tile.png");
+}
+header {
+	height: 135px;
+	background-image: url("images/tile.png");
+}
+header p {
+	position: absolute;
+	margin: 40px;
+	font-size: 3em;
+	display: inline;
+	color: whitesmoke;
+}
+header img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 20px;
+}
+nav {
+	background-image: url("images/slate.png");
+	background-color: slategray;
+	padding: 10px;
+}
+nav li {
+	display: inline-block;
+	font-size: 1.2em;
+	color: white;
+	margin-right: 3em;
+}
+
+a:link, a:visited {
+	color: whitesmoke;
+}
+a:hover {
+	color: red;
+}
+a:active {
+	color: blue;
+}
+table {
+	margin: 20px;
+	background-color: whitesmoke;
+	border-collapse: collapse;
+}
+th {
+	text-align: left;
+	width: 300px;
+	font-size: 15px;
+}
+#topic {
+	padding: 10px;
+	background-color: lightgray;
+	font-size: 1.8em;
+}
+#post{
+	font-size: 20px;
+	color: royalblue;
+	text-decoration: underline;
+}
+#tag {
+	font-size: 15px;
+}
+#s1 {
+	background-color: whitesmoke;
+}
+#s2 {
+	background-color: lightgray;
+}
+#box1 {
+	font-family: sans-serif;
+	background-image: url("images/marble.png");
+	visibility: hidden;
+	position: relative;
+	float: right;
+	background-color: whitesmoke;
+	height: 400px;
+	width: 300px;
+	font-size: 20px;
+}
+#upperText {
+	font-size: 30px;
+	text-align: center;
+}
+#lowerText {
+	font-size: 20px;
+	text-align: center;
+}
+#axeD {
+	left: 75px;
+	position: relative;
+	display: block;
+}
+#ad {
+	position: relative;
+	margin: 0px;
+	height: 30px;
+	width: 30px;
+	font-size: 20px;
+	background-color: red;
+}
+#bottom {
+	font-size: 20px;
+	margin: 20px;
+}
+img {
+	position: relative;
+	margin:	5px 10px 0px 10px;
+}
+#dwarf {
+	position: relative;
+	visibility: visible;
+} 
+#treelover, 
+#alpacafan, 
+#rockcarver, 
+#tavernenjoyer, 
+#bountyhunter, 
+#crazyangler, 
+#forgemaster, 
+#grumpydwarf {
+	visibility: hidden;
+}
+#slidebox {
+	display: block;
+	position: absolute;
+}
+#slideshow1 {
+	float: left;
+	top: 20px;
+	left: 50px;
+}
+#slideshow2 {
+	float: left;
+	top: 20px;
+	left: 100px;
+}
+#slideshow3 {
+	float: left;
+	top: 20px;
+	left: 150px;
+}
+#slideshow4 {
+	float: left;
+	top: 20px;
+	left: 200px;
+}
+#slideshow5 {
+	float: left;
+	top: 350px;
+	left: 50px;
+}
+#slideshow6 {
+	float: left;
+	top: 350px;
+	left: 100px;
+}
+#slideshow7 {
+	float: left;
+	top: 350px;
+	left: 150px;
+}
+#slideshow8 {
+	float: left;
+	top: 350px;
+	left: 200px;
+}
+footer {
+	padding-bottom: 30px;
+	position: relative;
+	text-align: center;
+	font-size: 30px;
+	top: 700px;
+}

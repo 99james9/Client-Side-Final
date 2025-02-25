@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Final Part 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="icon" type="image/x-icon" href="images/dwarf.png">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+<script>
+	function loadAd() {
+		document.getElementById("box1").style.visibility = "visible";
+		new Effect.SlideDown("box1", {duration: 2.0});
+	}
+
+	function closeAd() {
+		new Effect.SlideUp("box1", {duration: 2.0});
+		setTimeout(loadAd, 10000);
+	}
+
+	var counter = 0;
+	var current;
+	var next = "dwarf";
+	function change() {
+		new Effect.Parallel([
+			new Effect.Move(current, {sync: true, x: 1500, mode: 'relative'}),
+			new Effect.Move(next, {sync: false, x: 1500, mode: 'relative'}),
+			new Effect.Opacity(current, {sync: true, from: 1, to: 0})
+			], {
+			duration: 2
+		});
+		setTimeout(comeback, 2000);
+	}
+
+	function comeback() {
+		document.getElementById(current).style.visibility = "hidden";
+		document.getElementById(next).style.visibility = "visible";
+		new Effect.Parallel([
+			new Effect.Move(next, {sync: true, x: -1500, mode: 'relative'}),
+			new Effect.Move(current, {sync: false, x: -1500, mode: 'relative'}),
+			new Effect.Opacity(next, {sync: true, from: 0, to: 1})
+			], {
+			duration: 2
+		});
+	}
+
+	function changeSprite() {
+		if (counter == 0) {
+			current = next;
+			next = "treelover";
+			change();
+			counter++;
+		} else if (counter == 1) {
+			current = next;
+			next = "alpacafan";
+			change();
+			counter++;
+		} else if (counter == 2) {
+			current = next;
+			next = "rockcarver";
+			change();
+			counter++;
+		} else if (counter == 3) {
+			current = next;
+			next = "tavernenjoyer";
+			change();
+			counter++;
+		} else if (counter == 4) {
+			current = next;
+			next = "bountyhunter";
+			change();
+			counter++;
+		} else if (counter == 5) {
+			current = next;
+			next = "crazyangler";
+			change();
+			counter++
+		} else if (counter == 6) {
+			current = next;
+			next = "forgemaster";
+			change();
+			counter++;
+		} else if (counter == 7) {
+			current = next;
+			next = "grumpydwarf";
+			change();
+			counter++;
+		} else if (counter == 8) {
+			current = next;
+			next = "dwarf";
+			change();
+			counter = 0;
+		}
+	}
+</script>
+<body onload="setTimeout(loadAd, 10000)">
+	<header id="header">
+		<img id="dwarf" onclick="changeSprite()" src="images/dwarf.png" alt="dwarf">
+		<img id="treelover" onclick="changeSprite()" src="images/treelover.png" alt="elf">
+		<img id="alpacafan" onclick="changeSprite()" src="images/alpacafan.png" alt="bald dwarf">
+		<img id="rockcarver" onclick="changeSprite()" src="images/rockcarver.png" alt="concerned dwarf">
+		<img id="tavernenjoyer" onclick="changeSprite()" src="images/tavernenjoyer.png" alt="angry dwarf">
+		<img id="bountyhunter" onclick="changeSprite()" src="images/bountyhunter.png" alt="human bounty hunter">
+		<img id="crazyangler" onclick="changeSprite()" src="images/crazyangler.png" alt="happy dwarf">
+		<img id="forgemaster" onclick="changeSprite()" src="images/forgemaster.png" alt="forge dwarf">
+		<img id="grumpydwarf" onclick="changeSprite()" src="images/grumpydwarf.png" alt="grumpy dwarf">
+		<p>The Dwarf Forums</p>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="final-part1.html">Final part 1</a></li>
+			<li><a href="final-part2.html">Final part 2</a></li>
+			<li><a href="final-part3.html">Final part 3</a></li>
+		</ul>
+	</nav>
+	<main>
+		<table>
+			<div id="box1">
+				<input type="button" id="ad" value="x" onclick="closeAd()">
+				<img id="axeD" src="images/axeDwarf.png" height="150" width="150" alt="axe dwarf">
+				<p id="upperText"><b>I WANT YOU FOR THE FORTRESS' MILITARY</b></p>
+				<p id="lowerText">Come down to the barracks for recruitment.</p>
+			</div>
+			<tr>
+				<th id="topic">Topic</th>
+				<th id="topic">Comments</th>
+				<th id="topic">Updated</th>
+			</tr>
+			<tr id="s1">
+				<th>
+					<p id="post">The MASS deforestation needs to stop</p>
+					<p id="tag">Submitted by: <img src="images/treelover.png" width="10" height="20" alt="elf">Tree_lover17</p>
+				</th>
+				<th id="comment">29</th>
+				<th>4th Felsite of Year 89</th>
+			</tr>
+			<tr id="s2">
+				<th>
+					<p id="post">Has anyone seen my pet alpaca</p>
+					<p id="tag">Submitted by:<img src="images/alpacafan.png" width="10" height="20" alt="bald dwarf">AlpacaSuperFan</p>
+				</th>
+
+				<th id="comment">5</th>
+				<th>7th Malachite of Year 92</th>
+			</tr>
+			<tr id="s1">
+				<th>
+					<p id="post">Anyone else hearing strange noises coming from underground??</p>
+					<p id="tag">Submitted by:<img src="images/rockcarver.png" width="10" height="20" alt="concerned dwarf">RockCarver45</p>
+				</th>
+				<th id="comment">54</th>
+				<th>26th Timer of Year 72</th>
+			</tr>
+			<tr id="s2">
+				<th>
+					<p id="post">Out of drink...AGAIN!!</p>
+					<p id="tag">Submitted by:<img src="images/tavernenjoyer.png" width="10" height="20" alt="angry dwarf">TavernEnjoyer88</p>
+				</th>
+				<th id="comment">84</th>
+				<th>20th Moonstone of Year 94</th>
+			</tr>
+			<tr id="s1">
+				<th>
+					<p id="post">Looking for work in Monster Slaying</p>
+					<p id="tag">Submitted by:<img src="images/bountyhunter.png" width="10" height="20" alt="human bounty hunter">xXBountyHunterXx</p>
+				</th>
+				<th id="comment">99</th>
+				<th>5th Slate of Year 101</th>
+			</tr>
+			<tr id="s2">
+				<th>
+					<p id="post">Boy I sure love fishing, anyone else.</p>
+					<p id="tag">Submitted by:<img src="images/crazyangler.png" width="10" height="20" alt="happy dwarf">TheCrazyAngler</p>
+				</th>
+				<th id="comment">17</th>
+				<th>18th Obsidian of Year 83</th>
+			</tr>
+			<tr id="s1">
+				<th>
+					<p id="post">Anyone know what the military pays, I keep seeing this one ad.</p>
+					<p id="tag">Submitted by:<img src="images/forgemaster.png" width="10" height="20" alt="forge dwarf">DaForgeMaster</p>
+				</th>
+				<th id="comment">22</th>
+				<th>1st Hematite of Year 90</th>
+			</tr>
+			<tr id="s2">
+				<th>
+					<p id="post">Someone let me know if you've seen my legendary guitar, it's been missing since the tavern opened up.</p>
+					<p id="tag">Submitted by:<img src="images/grumpydwarf.png" width="10" height="20" alt="grumpy dwarf">GrumpyTheBard</p>
+				</th>
+				<th id="comment">4</th>
+				<th>13th opal of Year 78</th>
+			</tr>
+		</table>
+		<a href="#" id="bottom" onclick="Effect.ScrollTo('header')"; return false;>Back to top</a>
+	</main>
+</body>
+</html>
